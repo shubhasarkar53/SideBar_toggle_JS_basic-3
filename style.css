@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+.toggle-btn{
+    font-size: 1.5rem;
+    position: fixed;
+    right: 0;
+    top: 0.7em;
+    right: 1em;
+    color: hsl(205, 78%, 60%);
+    background-color: transparent;
+    border: transparent;
+    /* display: none; */
+    cursor: pointer;
+    transition: all 0.3s linear;
+    padding: 0.5em;
+}
+.toggle-btn:hover{
+    transform: rotate(90deg);
+    text-shadow: -6px -6px 6px rgba(0, 0, 0, 0.2);;
+    
+}
+.side-bar{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-100%);
+    /* border: 2px solid red; */
+    height: 100%;
+    padding: 0.5em 1.5em;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+        -2px -2px 10px rgba(0, 0, 0, 0.2);
+    
+    background-color: white;
+    transition: all 0.3s linear;
+    /* z-index: 5; */
+
+}
+.active{
+    transform: translate(0);
+}
+@media (min-width:640px) {
+    .side-bar{
+        width: 400px;
+    }
+}
+.side-bar-header{
+    /* border: 2px solid rgb(0, 255, 81); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h1{
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+
+}
+h1 span{
+    color:hsl(205, 78%, 60%);
+}
+.fa-xmark{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.fa-xmark:hover{
+    transform: rotate(360deg);
+}
+
+.lists{
+    padding: 1em 0;
+    margin-left: 0.5em;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.lists a{
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    color: hsl(205, 78%, 60%);
+}
+.lists a:hover{
+    background-color:  hsl(205, 86%, 81%);
+    color:hsl(205, 78%, 60%) ;
+    padding-left: 1em;
+}
